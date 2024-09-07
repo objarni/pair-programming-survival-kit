@@ -11,19 +11,19 @@
 }
 
 .sidebar {
-    width: 10%;      /* 10% of the viewport width */
-    background-color: lightgray; /* Just for visualization */
+    width: 10vw;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .content {
-    flex-grow: 1;    /* This will make the middle div expand to fill the rest */
-    background-color: lightblue; /* Just for visualization */
+    flex-grow: 1;
+    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
