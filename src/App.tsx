@@ -7,10 +7,12 @@ export default function App() {
   return (
     <>
       <div className="container">
-          <div className="arrow">Left Arrow</div>
+          <div className="arrow" onClick={() => setPage(page-1)}>
+            &lt;
+          </div>
           <div className="content">Page {page}</div>
-          <div className="arrow" onClick={(e) => setPage(page+1)}>
-          Right Arrow
+          <div className="arrow" onClick={() => setPage(page+1)}>
+            &gt;
           </div>
       </div>
     </>
