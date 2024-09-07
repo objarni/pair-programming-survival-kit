@@ -1,11 +1,27 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.card {
-  background-color: maroon;
-  padding: 2em;
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: maroon;
+}
+
+.arrow {
+    width: 10%;      /* 10% of the viewport width */
+    background-color: lightgray; /* Just for visualization */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    flex-grow: 1;    /* This will make the middle div expand to fill the rest */
+    background-color: lightblue; /* Just for visualization */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
