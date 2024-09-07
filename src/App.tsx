@@ -13,12 +13,12 @@ export default function App() {
     <>
       <div className="container">
           {page > 0 && (
-            <div className="arrow" onClick={() => setPage(page-1)}>
+            <div className="sidebar" onClick={() => setPage(page-1)}>
               Back
             </div>
           )}
           { page === 0 && (
-            <div className="arrow">
+            <div className="sidebar">
               &nbsp;
             </div>
           )}
@@ -26,7 +26,7 @@ export default function App() {
             Page {page}
             {texts[page]}
           </div>
-          <div className="arrow" onClick={() => setPage(page+1)}>
+          <div className="sidebar" onClick={() => setPage(page+1)}>
             Next
           </div>
       </div>

@@ -10,7 +10,7 @@
     background-color: maroon;
 }
 
-.arrow {
+.sidebar {
     width: 10%;      /* 10% of the viewport width */
     background-color: lightgray; /* Just for visualization */
     display: flex;
