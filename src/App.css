@@ -1,18 +1,17 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  background-color: darkgray;
 }
 
 .container {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: maroon;
 }
 
 .sidebar {
-    width: 10vw;
-    background-color: lightgray;
+    width: 10vw !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +21,10 @@
 }
 
 .content {
+    border-radius: 25px;
     flex-grow: 1;
-    background-color: lightblue;
+    background-color: lightgreen;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;

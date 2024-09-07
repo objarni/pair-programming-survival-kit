@@ -20,7 +20,7 @@ export default function App() {
 
           {page > 0 && (
             <div className="sidebar" onClick={() => setPage(page-1)}>
-              Back
+              Bak
             </div>
           )}
           { page === 0 && (
@@ -31,13 +31,13 @@ export default function App() {
 
           <div className="content">
             <div>
-              <h5>Page {page}</h5>
+              <h5>Tips {page+1}</h5>
               <div>{texts[page]}</div>
             </div>
           </div>
 
           <div className="sidebar" onClick={() => setPage(page+1)}>
-            Next
+            Fram
           </div>
       </div>
     </>
