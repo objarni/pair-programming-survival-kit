@@ -11,7 +11,8 @@
 }
 
 .sidebar {
-    width: 10vw !important;
+    width: 10vw;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,7 @@
 }
 
 .content {
+    padding: 10px;
     border-radius: 25px;
     flex-grow: 1;
     background-color: lightgreen;
