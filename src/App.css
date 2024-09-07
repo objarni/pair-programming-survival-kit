@@ -18,7 +18,7 @@
     align-items: center;
 }
 
-.middle {
+.content {
     flex-grow: 1;    /* This will make the middle div expand to fill the rest */
     background-color: lightblue; /* Just for visualization */
     display: flex;
