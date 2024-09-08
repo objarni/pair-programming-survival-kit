@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-type Tip = {
-  sv: string;
-  en: string;
+interface Translation {
+  sv: string,
+  en: string
+}
+
+type Tip = Translation;
+
+const appName: Translation = {
+  sv: "Parprogrammering - ett överlevnadskit",
+  en: "Pair Programming Survival Kit"
 }
 
 const texts: Tip[] = [
@@ -14,10 +21,6 @@ const texts: Tip[] = [
   {
     sv: "Inled en session med att 'connecta' med varandra. Hur mår du? Hur är din dag? Att förstå var den andra 'är' idag skapar empatisk kontakt och ökar motivation att bygga tillsammans, och minskar risken för friktion under sessionen. Förslag på timebox: 5 minuter.",
     en: "Start a session by 'connecting' with each other. How are you? How's your day? Understanding where the other person 'is' today creates empathetic contact, increases motivation to build together, and reduces the risk of friction during the session. Suggested timebox: 5 minutes."
-  },
-  {
-    sv: "Aligna sedan om ett första 'mikromål'. Att ha valt en ticket från Jira i förväg är nödvändigt men alltså inte tillräckligt. Försök formulera ett första steg tillsammans, gärna i text (t.ex. skriv ett meddelande i chatten), som gärna får vara riktigt litet (tänk 10 minuters jobb), så blir det så mycket lättare att förstå vad som pågår därefter, och ni får en bra start på sessionen. Lite som att skrynkla en post-it och slänga i papperskorgen, en liten YES-känsla fort! Exempel skulle kunna vara 'GOAL: get topmost acceptance criteria passing' eller 'GOAL: hello page seen in browser'. Förslag på timebox: 5 minuter.",
-    en: "Then align on a first 'micro-goal'. Having chosen a ticket from Jira in advance is necessary but not sufficient. Try to formulate a first step together, preferably in text (e.g., write a message in the chat), which can be really small (think 10 minutes of work), making it much easier to understand what's going on thereafter, and you get a good start to the session. It's like crumpling a post-it and throwing it in the trash, a quick YES feeling! Examples could be 'GOAL: get topmost acceptance criteria passing' or 'GOAL: hello page seen in browser'. Suggested timebox: 5 minutes."
   },
   {
     sv: "Aligna sedan om ett första 'mikromål'. Att ha valt en ticket från Jira i förväg är nödvändigt men alltså inte tillräckligt. Försök formulera ett första steg tillsammans, gärna i text (t.ex. skriv ett meddelande i chatten), som gärna får vara riktigt litet (tänk 10 minuters jobb), så blir det så mycket lättare att förstå vad som pågår därefter, och ni får en bra start på sessionen. Lite som att skrynkla en post-it och slänga i papperskorgen, en liten YES-känsla fort! Exempel skulle kunna vara 'GOAL: get topmost acceptance criteria passing' eller 'GOAL: hello page seen in browser'. Förslag på timebox: 5 minuter.",
@@ -69,7 +72,7 @@ export default function App() {
           {language === 'sv' ? 'EN' : 'SV'}
         </button>
       </div>
-      <h1>Pair Programming Survival Kit</h1>
+      <h2>{appName[language]}</h2>
       <div className="container">
         {page > 0 && (
           <div className="sidebar interactive" onClick={() => setPage(page-1)}>

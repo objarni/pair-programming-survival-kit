@@ -1,3 +1,7 @@
+.app {
+/*  position: relative;*/
+}
+
 body {
     background-color: black;
 }
@@ -5,7 +9,6 @@ body {
 #root {
   margin: 0 auto;
   text-align: center;
-  background-color: black;
 }
 
 .container {
@@ -39,11 +42,6 @@ body {
     align-items: center;
 }
 
-.app {
-  position: relative;
-  padding-top: 20px;
-}
-
 .interactive {
     color: white; /* Text color */
     background-color: gray;
@@ -58,8 +56,8 @@ body {
 
 .language-toggle {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 2px;
+  right: 20px;
 }
 
 .lang-button {
