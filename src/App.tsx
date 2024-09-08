@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 type Tip = {
@@ -47,21 +47,21 @@ export default function App() {
     return (localStorage.getItem('language') as 'sv' | 'en') || 'sv';
   });
 
-  const toggleLanguage = useCallback(() => {
+  const toggleLanguage = () => {
     setLanguage(prevLang => {
       const newLang = prevLang === 'sv' ? 'en' : 'sv';
       localStorage.setItem('language', newLang);
       return newLang;
     });
-  }, []);
+  };
 
-  const nextPage = useCallback(() => {
+  const nextPage = () => {
     setPage(prevPage => prevPage < texts.length - 1 ? prevPage + 1 : prevPage);
-  }, []);
+  };
 
-  const prevPage = useCallback(() => {
+  const prevPage = () => {
     setPage(prevPage => prevPage > 0 ? prevPage - 1 : prevPage);
-  }, []);
+  };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -74,7 +74,7 @@ export default function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [nextPage, prevPage]);
+  }, []);
 
   return (
     <div className="app">
