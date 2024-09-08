@@ -55,7 +55,7 @@ export default function App() {
       <div className="container">
         {page > 0 && (
           <div className="sidebar interactive" onClick={prevPage}>
-            {language === 'sv' ? 'Förra!' : 'Previous!'}
+            {language === 'sv' ? 'Förra!' : 'Back!'}
           </div>
         )}
  
