@@ -26,8 +26,8 @@ export const hints: Hint[] = [
     en: "The purpose of pair programming is long-term, e.g., sharing knowledge and T-shaping the team. How many hours does it take until you are both knowledgeable about this place and these tools? Therefore, turn down the volume on the voice that says 'it will go faster if the most knowledgeable types!' - that voice is a voice of stress and pressure."
   },
   {
-    sv: "Byt vem som sitter med tangentbordet antingen på klocka t.ex. var 5 eller 10 minut eller när typist (även känd som 'driver'. Den som sitter vid tangentbordet!) vet mer än navigatören (som vi kallar den som styr inriktning).",
-    en: "Switch who sits at the keyboard either on a clock, e.g., every 5 or 10 minutes, or when the typist (also known as 'driver'. The person sitting at the keyboard!) knows more than the navigator (as we call the person steering the direction)."
+    sv: "Byt vem som sitter med tangentbordet antingen på klocka t.ex. var 5 eller 10 minut eller när typist (den som sitter vid tangentbordet - även känt som 'driver') vet mer än navigatören (som vi kallar den som styr inriktning).",
+    en: "Switch who sits at the keyboard either on a clock, e.g., every 5 or 10 minutes, or when the typist (the person sitting at the keyboard - also known as 'driver') knows more than the navigator (as we call the person steering the direction)."
   },
   {
     sv: "Ha paus 10 minuter per timme! Låt gärna den i paret som är mest tidskänslig sköta detta. Ta en mobil, det räcker!",
