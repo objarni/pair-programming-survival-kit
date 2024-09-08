@@ -1,15 +1,21 @@
-export const texts: Tip[] = [
+import {Hint} from './types.ts'
+
+export const hints: Hint[] = [
   {
     sv: "Det hjälper att ha en ödmjuk inställning. Parprogrammering är utmanande, det tränar skills du kanske inte är van vid att bruka som isolerad utvecklare. Tala högt om kod, vara nyfiken på hur andra tänker, vara pedagogisk, visa att du inte kan allt etc. Det tar tid att bygga dessa skills så ha tålamod med dig själv och den du parprogrammerar med!",
     en: "It helps to have a humble attitude. Pair programming is challenging; it trains skills you might not be used to as an isolated developer. Speak aloud about code, be curious about how others think, be pedagogical, show that you don't know everything, etc. It takes time to build these skills, so be patient with yourself and your pair programming partner!"
   },
   {
-    sv: "Inled en session med att 'connecta' med varandra. Hur mår du? Hur är din dag? Att förstå var den andra 'är' idag skapar empatisk kontakt och ökar motivation att bygga tillsammans, och minskar risken för friktion under sessionen. Förslag på timebox: 5 minuter.",
+    sv: "Inled sessionen med att 'connecta' med varandra. Hur mår du? Hur är din dag? Att förstå var den andra 'är' idag skapar empatisk kontakt och ökar motivation att bygga tillsammans, och minskar risken för friktion under sessionen. Förslag på timebox: 5 minuter.",
     en: "Start a session by 'connecting' with each other. How are you? How's your day? Understanding where the other person 'is' today creates empathetic contact, increases motivation to build together, and reduces the risk of friction during the session. Suggested timebox: 5 minutes."
   },
   {
-    sv: "Aligna sedan om ett första 'mikromål'. Att ha valt en ticket från Jira i förväg är nödvändigt men alltså inte tillräckligt. Försök formulera ett första steg tillsammans, gärna i text (t.ex. skriv ett meddelande i chatten), som gärna får vara riktigt litet (tänk 10 minuters jobb), så blir det så mycket lättare att förstå vad som pågår därefter, och ni får en bra start på sessionen. Lite som att skrynkla en post-it och slänga i papperskorgen, en liten YES-känsla fort! Exempel skulle kunna vara 'GOAL: get topmost acceptance criteria passing' eller 'GOAL: hello page seen in browser'. Förslag på timebox: 5 minuter.",
-    en: "Then align on a first 'micro-goal'. Having chosen a ticket from Jira in advance is necessary but not sufficient. Try to formulate a first step together, preferably in text (e.g., write a message in the chat), which can be really small (think 10 minutes of work), making it much easier to understand what's going on thereafter, and you get a good start to the session. It's like crumpling a post-it and throwing it in the trash, a quick YES feeling! Examples could be 'GOAL: get topmost acceptance criteria passing' or 'GOAL: hello page seen in browser'. Suggested timebox: 5 minutes."
+    sv: "Därefter, sätt ett första 'mikromål' tillsammans. Att ha valt en ticket från Jira i förväg är nödvändigt men alltså inte tillräckligt. Får vara riktigt litet (tänk 10 minuters jobb) så blir det så mycket lättare att förstå vad som pågår därefter för båda. Timeboxa målskrivandet till 5 minuter.",
+    en: "Then align on an initial 'micro goal' together. Having selected a ticket from Jira in advance is necessary but not sufficient. Must be really small (think 10 minute job) and it will be so much easier to understand what is going on next for both. Timebox the goal writing to 5 minutes."
+  },
+  {
+    sv: "Mer om mikromål: Att klara av det första målet är som att skrynkla en post-it och slänga i papperskorgen, en liten YES-känsla fort! Exempel på mikromål 'GOAL: hello page seen in browser' och 'Consistent variable names in current file'. Skriv gärna ned mikromålet i chatten för tydlighet - vissa uppfattar saker bättre i text!",
+    en: "More on micro goals: Accomplishing the first goal is like crumpling up a post-it note and throwing it in the trash, a little YES feeling fast! Examples of microgoals 'GOAL: hello page seen in browser' and 'Consistent variable names in current file'. Feel free to write down the micro goal in the chat for clarity - some people perceive things better in text!"
   },
   {
     sv: "När det sedan kommer till att göra, låt den som känner sig mest osäker sitta vid tangentbordet. Detta medför att den mer erfarne delar med sig av kunskap kring koden, verktygen och domänen.",

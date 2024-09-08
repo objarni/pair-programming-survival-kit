@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import {texts} from './tips.ts'
+import {hints} from './hints.ts'
+import {Translation} from './types.ts'
 
-interface Translation {
-  sv: string,
-  en: string
-}
-
-type Tip = Translation;
 
 const appName: Translation = {
   sv: "Parprogrammering - ett överlevnadskit",
@@ -66,12 +61,12 @@ export default function App() {
  
         <div className="content">
           <div>
-            <h3>{language === 'sv' ? 'Tips' : 'Tip'} {page+1}</h3>
-            <div>{texts[page][language]}</div>
+            <h3>{language === 'sv' ? 'Tips' : 'Hint'} {page+1}</h3>
+            <div>{hints[page][language]}</div>
           </div>
         </div>
 
-        {page < texts.length-1 && (
+        {page < hints.length-1 && (
           <div className="sidebar interactive" onClick={nextPage}>
             {language === 'sv' ? 'Nästa!' : 'Next!'}
           </div>
