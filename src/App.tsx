@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
 type Tip = {
   sv: string;
@@ -45,8 +45,17 @@ export default function App() {
   const [page, setPage] = useState<number>(0);
   const [language, setLanguage] = useState<'sv' | 'en'>('sv');
 
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('language') as 'sv' | 'en';
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+
   const toggleLanguage = () => {
-    setLanguage(prevLang => prevLang === 'sv' ? 'en' : 'sv');
+    const newLang = language === 'sv' ? 'en' : 'sv';
+    setLanguage(newLang);
+    localStorage.setItem('language', newLang);
   };
 
   return (
