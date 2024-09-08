@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 
+type Hint = {
+  title: string,
+  content: string
+}
 
 const texts: string[] = [
   "Det hjälper att ha en ödmjuk inställning. Parprogrammering är utmanande, det tränar skills du kanske inte är van vid att bruka som isolerad utvecklare. Tala högt om kod, vara nyfiken på hur andra tänker, vara pedagogisk, visa att du inte kan allt etc. Det tar tid att bygga dessa skills så ha tålamod med dig själv och den du parprogrammerar med!",
@@ -18,6 +22,7 @@ export default function App() {
 
   return (
     <>
+      <h1>Pair Programming Survival Kit</h1>
       <div className="container">
 
           {page > 0 && (
