@@ -23,7 +23,7 @@ export const hints: Hint[] = [
   },
   {
     sv: "Parprogrammeringens syfte är långsiktighet t.ex. dela kunskap och T-shape:a teamet. Hur många timmar tar det tills ni båda är kunniga på detta ställe och med dessa verktyg? Skruva därför ned volymen på rösten som säger 'men det kommer ju gå mycket fortare om du som kan detta gör det!' - den rösten är en röst av stress och press.",
-    en: "The purpose of pair programming is long-term, e.g., sharing knowledge and T-shaping the team. How many hours does it take until you are both knowledgeable about this place and these tools? Therefore, turn down the volume on the voice that says 'but it will go much faster if you who know this do it!' - that voice is a voice of stress and pressure."
+    en: "The purpose of pair programming is long-term, e.g., sharing knowledge and T-shaping the team. How many hours does it take until you are both knowledgeable about this place and these tools? Therefore, turn down the volume on the voice that says 'it will go faster if the most knowledgeable types!' - that voice is a voice of stress and pressure."
   },
   {
     sv: "Byt vem som sitter med tangentbordet antingen på klocka t.ex. var 5 eller 10 minut eller när typist (även känd som 'driver'. Den som sitter vid tangentbordet!) vet mer än navigatören (som vi kallar den som styr inriktning).",
