@@ -50,11 +50,13 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className="app">
+      <div className="language-toggle">
+        <button onClick={toggleLanguage} className="lang-button">
+          {language === 'sv' ? 'EN' : 'SV'}
+        </button>
+      </div>
       <h1>Pair Programming Survival Kit</h1>
-      <button onClick={toggleLanguage}>
-        {language === 'sv' ? 'Switch to English' : 'Byt till Svenska'}
-      </button>
       <div className="container">
         {page > 0 && (
           <div className="sidebar" onClick={() => setPage(page-1)}>
@@ -75,6 +77,6 @@ export default function App() {
           </div>
         )}
       </div>
-    </>
+    </div>
   )
 }
