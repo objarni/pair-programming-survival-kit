@@ -24,7 +24,7 @@ export default function App() {
   };
 
   const nextPage = () => {
-    setPage(prevPage => prevPage < texts.length - 1 ? prevPage + 1 : prevPage);
+    setPage(prevPage => prevPage < hints.length - 1 ? prevPage + 1 : prevPage);
   };
 
   const prevPage = () => {
