@@ -20,6 +20,10 @@ const texts: Tip[] = [
     en: "Then align on a first 'micro-goal'. Having chosen a ticket from Jira in advance is necessary but not sufficient. Try to formulate a first step together, preferably in text (e.g., write a message in the chat), which can be really small (think 10 minutes of work), making it much easier to understand what's going on thereafter, and you get a good start to the session. It's like crumpling a post-it and throwing it in the trash, a quick YES feeling! Examples could be 'GOAL: get topmost acceptance criteria passing' or 'GOAL: hello page seen in browser'. Suggested timebox: 5 minutes."
   },
   {
+    sv: "Aligna sedan om ett första 'mikromål'. Att ha valt en ticket från Jira i förväg är nödvändigt men alltså inte tillräckligt. Försök formulera ett första steg tillsammans, gärna i text (t.ex. skriv ett meddelande i chatten), som gärna får vara riktigt litet (tänk 10 minuters jobb), så blir det så mycket lättare att förstå vad som pågår därefter, och ni får en bra start på sessionen. Lite som att skrynkla en post-it och slänga i papperskorgen, en liten YES-känsla fort! Exempel skulle kunna vara 'GOAL: get topmost acceptance criteria passing' eller 'GOAL: hello page seen in browser'. Förslag på timebox: 5 minuter.",
+    en: "Then align on a first 'micro-goal'. Having chosen a ticket from Jira in advance is necessary but not sufficient. Try to formulate a first step together, preferably in text (e.g., write a message in the chat), which can be really small (think 10 minutes of work), making it much easier to understand what's going on thereafter, and you get a good start to the session. It's like crumpling a post-it and throwing it in the trash, a quick YES feeling! Examples could be 'GOAL: get topmost acceptance criteria passing' or 'GOAL: hello page seen in browser'. Suggested timebox: 5 minutes."
+  },
+  {
     sv: "När det sedan kommer till att göra, låt den som känner sig mest osäker sitta vid tangentbordet. Detta medför att den mer erfarne delar med sig av kunskap kring koden, verktygen och domänen.",
     en: "When it comes to doing, let the person who feels most unsure sit at the keyboard. This means that the more experienced person shares knowledge about the code, tools, and domain."
   },
@@ -61,14 +65,14 @@ export default function App() {
   return (
     <div className="app">
       <div className="language-toggle">
-        <button onClick={toggleLanguage} className="lang-button">
+        <button onClick={toggleLanguage} className="lang-button interactive">
           {language === 'sv' ? 'EN' : 'SV'}
         </button>
       </div>
       <h1>Pair Programming Survival Kit</h1>
       <div className="container">
         {page > 0 && (
-          <div className="sidebar" onClick={() => setPage(page-1)}>
+          <div className="sidebar interactive" onClick={() => setPage(page-1)}>
             {language === 'sv' ? 'Förra!' : 'Previous!'}
           </div>
         )}
@@ -81,7 +85,7 @@ export default function App() {
         </div>
 
         {page < texts.length-1 && (
-          <div className="sidebar" onClick={() => setPage(page+1)}>
+          <div className="sidebar interactive" onClick={() => setPage(page+1)}>
             {language === 'sv' ? 'Nästa!' : 'Next!'}
           </div>
         )}

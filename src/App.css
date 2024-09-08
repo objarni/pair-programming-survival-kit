@@ -15,10 +15,7 @@ body {
 }
 
 .sidebar {
-    background-color: gray;
-    border: 2px solid darkgray; /* Dark gray edge */
     border-radius: 12px; /* Rounded corners */
-    color: white; /* Text color */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -41,9 +38,22 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .app {
   position: relative;
   padding-top: 20px;
+}
+
+.interactive {
+    color: white; /* Text color */
+    background-color: gray;
+    border: 2px solid darkgray; /* Dark gray edge */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.interactive:hover {
+  background-color: #e0e0e0;
 }
 
 .language-toggle {
@@ -53,16 +63,9 @@ body {
 }
 
 .lang-button {
-  background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 5px 10px;
   font-size: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.lang-button:hover {
-  background-color: #e0e0e0;
 }
 
