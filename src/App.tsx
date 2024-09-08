@@ -46,24 +46,42 @@ const texts: Tip[] = [
     sv: "Sessionen på 1-3 h avslutas med retrospektiv i 10 minuter; detta är viktigt eftersom denna form av arbete är högintensiv och ni kommer behöva 'ventilera' inför varandra. GLÖM INTE BORT DETTA STEG; i min erfarenhet är det det allra vanligaste misstaget, att glömma bort retrotid.",
     en: "The 1-3 hour session ends with a 10-minute retrospective; this is important because this form of work is high-intensity and you will need to 'ventilate' with each other. DON'T FORGET THIS STEP; in my experience, it's the most common mistake to forget retro time."
   }
-]
+];
 
 export default function App() {
   const [page, setPage] = useState<number>(0);
-  const [language, setLanguage] = useState<'sv' | 'en'>('sv');
-
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem('language') as 'sv' | 'en';
-    if (storedLanguage) {
-      setLanguage(storedLanguage);
-    }
-  }, []);
+  const [language, setLanguage] = useState<'sv' | 'en'>(() => {
+    return (localStorage.getItem('language') as 'sv' | 'en') || 'sv';
+  });
 
   const toggleLanguage = () => {
-    const newLang = language === 'sv' ? 'en' : 'sv';
-    setLanguage(newLang);
-    localStorage.setItem('language', newLang);
+    setLanguage(prevLang => {
+      const newLang = prevLang === 'sv' ? 'en' : 'sv';
+      localStorage.setItem('language', newLang);
+      return newLang;
+    });
   };
+
+  const nextPage = () => {
+    setPage(prevPage => prevPage < texts.length - 1 ? prevPage + 1 : prevPage);
+  };
+
+  const prevPage = () => {
+    setPage(prevPage => prevPage > 0 ? prevPage - 1 : prevPage);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowRight') {
+        nextPage();
+      } else if (event.key === 'ArrowLeft') {
+        prevPage();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
     <div className="app">
@@ -75,7 +93,7 @@ export default function App() {
       <h2>{appName[language]}</h2>
       <div className="container">
         {page > 0 && (
-          <div className="sidebar interactive" onClick={() => setPage(page-1)}>
+          <div className="sidebar interactive" onClick={prevPage}>
             {language === 'sv' ? 'Förra!' : 'Previous!'}
           </div>
         )}
@@ -88,7 +106,7 @@ export default function App() {
         </div>
 
         {page < texts.length-1 && (
-          <div className="sidebar interactive" onClick={() => setPage(page+1)}>
+          <div className="sidebar interactive" onClick={nextPage}>
             {language === 'sv' ? 'Nästa!' : 'Next!'}
           </div>
         )}
