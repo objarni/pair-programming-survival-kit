@@ -34,9 +34,8 @@ body {
 .content {
     padding: 10px;
     border-radius: 25px;
-    flex-grow: 1;
     background-color: lightgreen;
-    width: 60ch;
+    width: 30ch;
     color: black;
     display: flex;
     justify-content: center;
