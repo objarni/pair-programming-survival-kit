@@ -12,6 +12,6 @@ A set of hints on how to make pair-programming good enough to try more than once
 
 Pushes to master are auto published here:
 
-    https://pair-programming-survival-kit.netlify.app/
+https://pair-programming-survival-kit.netlify.app/
 
 
