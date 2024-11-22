@@ -6,8 +6,8 @@ export const hints: Hint[] = [
     en: "It helps to have a humble attitude. Pair programming is challenging; it trains skills you might not be used to as an isolated developer. Speak aloud about code, be curious about how others think, be pedagogical, show that you don't know everything, etc. It takes time to build these skills, so be patient with yourself and your pair programming partner!"
   },
   {
-    sv: "Inled sessionen med att 'connecta' med varandra. Hur mår du? Hur är din dag? Att förstå var den andra 'är' idag skapar empatisk kontakt och ökar motivation att bygga tillsammans, och minskar risken för friktion under sessionen. Förslag på timebox: 5 minuter.",
-    en: "Start a session by 'connecting' with each other. How are you? How's your day? Understanding where the other person 'is' today creates empathetic contact, increases motivation to build together, and reduces the risk of friction during the session. Suggested timebox: 5 minutes."
+    sv: "Inled sessionen med att 'connecta' med varandra. Hur mår du? Hur är din dag? Att förstå var den andra 'är' idag skapar empatisk kontakt och ökar motivation att bygga tillsammans, och minskar risken för friktion under sessionen.",
+    en: "Start a session by 'connecting' with each other. How are you? How's your day? Understanding where the other person 'is' today creates empathetic contact, increases motivation to build together, and reduces the risk of friction during the session."
   },
   {
     sv: "Därefter, sätt ett första 'mikromål' tillsammans. Att ha valt en ticket från Jira i förväg är nödvändigt men alltså inte tillräckligt. Får vara riktigt litet (tänk 10 minuters jobb) så blir det så mycket lättare att förstå vad som pågår därefter för båda. Timeboxa målskrivandet till 5 minuter.",
