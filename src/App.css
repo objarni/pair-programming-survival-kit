@@ -6,6 +6,10 @@ body {
     background-color: black;
 }
 
+li {
+    list-style-type: none;
+}
+
 #root {
   margin: 0 auto;
   text-align: center;
@@ -56,6 +60,12 @@ body {
 .language-toggle {
   position: absolute;
   top: 2px;
+  right: 20px;
+}
+
+.author {
+  position: absolute;
+  bottom: 26px;
   right: 20px;
 }
 
