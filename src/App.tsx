@@ -47,7 +47,11 @@ export default function App() {
   return (
       <div className="app">
 
-        <h2>{appName[language]}</h2>
+        <h2>
+          <a href="https://bit.ly/pair-programming-hints">
+            {appName[language]}
+          </a>
+        </h2>
 
         <div className="container">
           {page > 0 && (
