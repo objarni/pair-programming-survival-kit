@@ -47,6 +47,29 @@ export default function App() {
   return (
       <div className="app">
 
+        <h2>{appName[language]}</h2>
+
+        <div className="container">
+          {page > 0 && (
+              <div className="sidebar interactive" onClick={prevPage}>
+                {language==='sv' ? 'Förra!':'Back!'}
+              </div>
+          )}
+
+          <div className="content">
+            <div>
+              <h3>{language==='sv' ? 'Tips':'Hint'} {page + 1}</h3>
+              <div>{hints[page][language]}</div>
+            </div>
+          </div>
+
+          {page < hints.length - 1 && (
+              <div className="sidebar interactive" onClick={nextPage}>
+                {language==='sv' ? 'Nästa!':'Next!'}
+              </div>
+          )}
+        </div>
+
         <div className="language-toggle">
           <button onClick={toggleLanguage} className="lang-button interactive">
             {language==='sv' ? 'EN':'SV'}
@@ -68,27 +91,6 @@ export default function App() {
           </ul>
         </div>
 
-        <h2>{appName[language]}</h2>
-        <div className="container">
-          {page > 0 && (
-              <div className="sidebar interactive" onClick={prevPage}>
-                {language==='sv' ? 'Förra!':'Back!'}
-              </div>
-          )}
-
-          <div className="content">
-            <div>
-              <h3>{language==='sv' ? 'Tips':'Hint'} {page + 1}</h3>
-              <div>{hints[page][language]}</div>
-            </div>
-          </div>
-
-          {page < hints.length - 1 && (
-              <div className="sidebar interactive" onClick={nextPage}>
-                {language==='sv' ? 'Nästa!':'Next!'}
-              </div>
-          )}
-        </div>
       </div>
   )
 }
